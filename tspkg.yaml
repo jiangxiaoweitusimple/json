@@ -1,8 +1,7 @@
 name: nlohmann_json
 version: 3.7.0
-​
+
 build: |
-​
   [[ -n $CLEANUP ]] && rm -rf build
   [[ -z $JOBS ]] && JOBS=$(nproc)
   mkdir -p build
