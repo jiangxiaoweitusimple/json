@@ -1,0 +1,12 @@
+name: nlohmann_json
+version: 3.7.0
+​
+build: |
+​
+  [[ -n $CLEANUP ]] && rm -rf build
+  [[ -z $JOBS ]] && JOBS=$(nproc)
+  mkdir -p build
+  cd build
+  cmake .. -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE -DJSON_BuildTests=OFF
+  make -j$JOBS
+  make install% 
